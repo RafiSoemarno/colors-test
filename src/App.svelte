@@ -7,26 +7,27 @@
 		var blue = document.getElementById('blue')
 
 		carousel.addEventListener('slide.bs.carousel', function(evt) {
-			if(evt.to == '0') {
-				red.setAttribute('class', 'btn btn-lg btn-outline-danger active')
-				green.setAttribute('class', 'btn btn-lg btn-outline-success')
-				blue.setAttribute('class', 'btn btn-lg btn-outline-primary')
-			}
-			if(evt.to == '1') {
-				red.setAttribute('class', 'btn btn-lg btn-outline-danger')
-				green.setAttribute('class', 'btn btn-lg btn-outline-success active')
-				blue.setAttribute('class', 'btn btn-lg btn-outline-primary')
-			}
-			if(evt.to == '2') {
-				red.setAttribute('class', 'btn btn-lg btn-outline-danger')
-				green.setAttribute('class', 'btn btn-lg btn-outline-success')
-				blue.setAttribute('class', 'btn btn-lg btn-outline-primary active')
-			}
+      switch(evt.to) {
+        case "0":
+          red.setAttribute('class', 'btn btn-lg btn-outline-danger active')
+				  green.setAttribute('class', 'btn btn-lg btn-outline-success')
+				  blue.setAttribute('class', 'btn btn-lg btn-outline-primary')
+          break
+        case "1":
+          red.setAttribute('class', 'btn btn-lg btn-outline-danger')
+				  green.setAttribute('class', 'btn btn-lg btn-outline-success active')
+				  blue.setAttribute('class', 'btn btn-lg btn-outline-primary')
+          break
+        case "2":
+          red.setAttribute('class', 'btn btn-lg btn-outline-danger')
+				  green.setAttribute('class', 'btn btn-lg btn-outline-success')
+				  blue.setAttribute('class', 'btn btn-lg btn-outline-primary active')
+      }
 		})
 
 		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  			return new bootstrap.Popover(popoverTriggerEl)
+		popoverTriggerList.map(function (popoverTriggerEl) {
+  			new bootstrap.Popover(popoverTriggerEl)
 		})
 	})
 </script>
