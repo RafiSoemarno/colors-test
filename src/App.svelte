@@ -7,21 +7,18 @@
     var blue = document.getElementById("blue");
 
     carousel.addEventListener("slide.bs.carousel", function (evt) {
-      switch (evt.to) {
-        case "0":
-          red.setAttribute("class", "btn btn-lg btn-outline-danger active");
-          green.setAttribute("class", "btn btn-lg btn-outline-success");
-          blue.setAttribute("class", "btn btn-lg btn-outline-primary");
-          break;
-        case "1":
-          red.setAttribute("class", "btn btn-lg btn-outline-danger");
-          green.setAttribute("class", "btn btn-lg btn-outline-success active");
-          blue.setAttribute("class", "btn btn-lg btn-outline-primary");
-          break;
-        case "2":
-          red.setAttribute("class", "btn btn-lg btn-outline-danger");
-          green.setAttribute("class", "btn btn-lg btn-outline-success");
-          blue.setAttribute("class", "btn btn-lg btn-outline-primary active");
+      if (evt.to == "0") {
+        red.setAttribute("class", "btn btn-lg btn-outline-danger active");
+        green.setAttribute("class", "btn btn-lg btn-outline-success");
+        blue.setAttribute("class", "btn btn-lg btn-outline-primary");
+      } else if (evt.to == "1") {
+        red.setAttribute("class", "btn btn-lg btn-outline-danger");
+        green.setAttribute("class", "btn btn-lg btn-outline-success active");
+        blue.setAttribute("class", "btn btn-lg btn-outline-primary");
+      } else {
+        red.setAttribute("class", "btn btn-lg btn-outline-danger");
+        green.setAttribute("class", "btn btn-lg btn-outline-success");
+        blue.setAttribute("class", "btn btn-lg btn-outline-primary active");
       }
     });
 
