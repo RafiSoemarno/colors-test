@@ -33,11 +33,11 @@
 
 <nav class="navbar navbar-dark bg-dark px-4">
   <div class="container-fluid">
-    <ul class="navbar-nav align-items-center mx-auto">
-      <li class="nav-item">
+    <div class="row align-items-center mx-auto">
+      <div class="col me-5">
         <h1 class="text-light display-3">Colors!</h1>
-      </li>
-      <li class="nav-item">
+      </div>
+      <div class="col">
         <button
           id="red"
           class="btn btn-lg btn-outline-danger active"
@@ -51,8 +51,8 @@
           title="Red button"
           data-bs-content="It's red!">Red</button
         >
-      </li>
-      <li class="nav-item">
+      </div>
+      <div class="col">
         <button
           id="green"
           class="btn btn-lg btn-outline-success"
@@ -66,8 +66,8 @@
           title="Green button"
           data-bs-content="It's green!">Green</button
         >
-      </li>
-      <li class="nav-item">
+      </div>
+      <div class="col">
         <button
           id="blue"
           class="btn btn-lg btn-outline-primary"
@@ -81,8 +81,8 @@
           title="Blue button"
           data-bs-content="It's blue!">Blue</button
         >
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </nav>
 
